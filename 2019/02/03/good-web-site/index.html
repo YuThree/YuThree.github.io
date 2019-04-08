@@ -269,20 +269,18 @@
     <div class="card-content">
         <h3 class="title is-5 has-text-weight-normal">评论</h3>
         
-<div id="comment-container"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
-	var gitment = new Gitment({
-		id: '2019/02/03/good-web-site/',
-		owner: 'YuThree',
-		repo: 'iocomment',
-		oauth: {
-			client_id: '4fb407060f201bdc85b8',
-			client_secret: '6f1b029db3949155d96ec16be5df65318b63f0d8',
-		},
-	})
-	gitment.render('comment-container')
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'Gl9FYbzkhNBtYUCUVFdbeRL2-gzGzoHsz',
+        app_key: 'TcahwRyT3XpSnjAG7GJ0KrG0',
+        placeholder: 'your comment'
+    });
 </script>
 
     </div>
