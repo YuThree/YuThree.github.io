@@ -35,6 +35,7 @@
     <script type="text/javascript">
         $(function () {
             var casearry = [];
+            var baiducasearry = [];
             $('#google').on('keydown', function (e) {
                 if (e.keyCode == 13) {
                     youdao();
@@ -99,15 +100,12 @@
             var appid = '20190108000255477';
             var key = 'zrd8OQFO7LKBnLA0OHik';
             var salt = (new Date).getTime();
-            var query = 'apple';
+            var query =  $('#google').val();
             // 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
-            var from = 'en';
-            var to = 'zh';
+            var from = 'auto';
+            var to = 'en';
             var str1 = appid + query + salt + key;
             var sign = md5(str1);
-
-
-
             $.ajax({
                 url: 'https://api.fanyi.baidu.com/api/trans/vip/translate',
                 type: "get",
@@ -122,17 +120,17 @@
                 },
                 success: function (res) {
                     console.log(res);
-                    casearry = res.translation[0].split(' ');
+                    baiducasearry = res.trans_result[0].dst.split(' ');
 
-                    $.each(casearry, function (index, Element) {
-                        casearry[index] = Element.substring(0, 1).toUpperCase() + casearry[index].substring(
+                    $.each(baiducasearry, function (index, Element) {
+                        baiducasearry[index] = Element.substring(0, 1).toUpperCase() + baiducasearry[index].substring(
                             1,
-                            casearry[index].length);
+                            baiducasearry[index].length);
                     });
-                    casearry[0] = casearry[0].substring(0, 1).toLowerCase() + casearry[0].substring(1,
-                        casearry[0].length)
+                    baiducasearry[0] = baiducasearry[0].substring(0, 1).toLowerCase() + baiducasearry[0].substring(1,
+                        baiducasearry[0].length)
                     var nowtrans = '';
-                    $.each(casearry, function (index, Element) {
+                    $.each(baiducasearry, function (index, Element) {
                         nowtrans += Element;
                     });
                     $('#bdtrans').val(nowtrans)
