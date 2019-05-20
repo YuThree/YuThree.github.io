@@ -1,3 +1,3 @@
 # YuThree.github.io
 web
-personal web build by Hexo & hexo-theme-icarus 
+personal web build by Hexo & hexo-theme-icarus code
