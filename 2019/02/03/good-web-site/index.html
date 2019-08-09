@@ -11,7 +11,7 @@
 <meta name="keywords" content="链接,网站收藏">
 <meta property="og:type" content="article">
 <meta property="og:title" content="good web site">
-<meta property="og:url" content="http://yoursite.com/2019/02/03/good-web-site/index.html">
+<meta property="og:url" content="https://yuthree.github.io/2019/02/03/good-web-site/index.html">
 <meta property="og:site_name" content="YuThree">
 <meta property="og:description" content="上一篇是需要下载的一些工具，下面是一些在线的好用的 工具地址 或者一些不错的网址">
 <meta property="og:locale" content="zh-CN">
@@ -269,18 +269,19 @@
     <div class="card-content">
         <h3 class="title is-5 has-text-weight-normal">评论</h3>
         
-<div id="valine-thread" class="content"></div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.min.js"></script>
 <script>
-    new Valine({
-        el: '#valine-thread' ,
-        notify: true,
-        verify: true,
-        app_id: 'Gl9FYbzkhNBtYUCUVFdbeRL2-gzGzoHsz',
-        app_key: 'TcahwRyT3XpSnjAG7GJ0KrG0',
-        placeholder: 'your comment'
-    });
+    var gitalk = new Gitalk({
+        clientID: '2ad765d5f8399d6c74fb',
+        clientSecret: '790ad25b36b8722d5fd225219105f31806898862',
+        id: '241cdd1db913adf922eb35014f9edb50',
+        repo: 'yuthreeComment',
+        owner: 'YuThree',
+        admin: ["YuThree"]
+    })
+    gitalk.render('comment-container')
 </script>
 
     </div>
@@ -931,7 +932,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 ybc&nbsp;
+                &copy; 2019 YuThree&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
                 <br>

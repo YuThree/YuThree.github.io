@@ -10,21 +10,21 @@
     <meta name="keywords" content="壁纸">
 <meta property="og:type" content="article">
 <meta property="og:title" content="img-show">
-<meta property="og:url" content="http://yoursite.com/2019/04/04/img-show/index.html">
+<meta property="og:url" content="https://yuthree.github.io/2019/04/04/img-show/index.html">
 <meta property="og:site_name" content="YuThree">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/titlebg_4.jpg">
-<meta property="og:image" content="http://yoursite.com/images/titlebg_5.jpg">
-<meta property="og:image" content="http://yoursite.com/images/titlebg_6.jpg">
-<meta property="og:image" content="http://yoursite.com/images/titlebg_7.jpg">
-<meta property="og:image" content="http://yoursite.com/images/titlebg_8.jpg">
-<meta property="og:image" content="http://yoursite.com/images/titlebg_9.jpg">
-<meta property="og:image" content="http://yoursite.com/images/titlebg_10.jpg">
-<meta property="og:image" content="http://yoursite.com/images/titlebg_11.jpg">
+<meta property="og:image" content="https://yuthree.github.io/images/titlebg_4.jpg">
+<meta property="og:image" content="https://yuthree.github.io/images/titlebg_5.jpg">
+<meta property="og:image" content="https://yuthree.github.io/images/titlebg_6.jpg">
+<meta property="og:image" content="https://yuthree.github.io/images/titlebg_7.jpg">
+<meta property="og:image" content="https://yuthree.github.io/images/titlebg_8.jpg">
+<meta property="og:image" content="https://yuthree.github.io/images/titlebg_9.jpg">
+<meta property="og:image" content="https://yuthree.github.io/images/titlebg_10.jpg">
+<meta property="og:image" content="https://yuthree.github.io/images/titlebg_11.jpg">
 <meta property="og:updated_time" content="2019-04-10T07:04:27.009Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="img-show">
-<meta name="twitter:image" content="http://yoursite.com/images/titlebg_4.jpg">
+<meta name="twitter:image" content="https://yuthree.github.io/images/titlebg_4.jpg">
 <meta property="fb:admins" content="100011677446168">
 <meta property="fb:app_id" content="100011677446168">
 
@@ -252,18 +252,19 @@
     <div class="card-content">
         <h3 class="title is-5 has-text-weight-normal">评论</h3>
         
-<div id="valine-thread" class="content"></div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.min.js"></script>
 <script>
-    new Valine({
-        el: '#valine-thread' ,
-        notify: true,
-        verify: true,
-        app_id: 'Gl9FYbzkhNBtYUCUVFdbeRL2-gzGzoHsz',
-        app_key: 'TcahwRyT3XpSnjAG7GJ0KrG0',
-        placeholder: 'your comment'
-    });
+    var gitalk = new Gitalk({
+        clientID: '2ad765d5f8399d6c74fb',
+        clientSecret: '790ad25b36b8722d5fd225219105f31806898862',
+        id: '7212e59ea3e08a0a6b2d714df9df551a',
+        repo: 'yuthreeComment',
+        owner: 'YuThree',
+        admin: ["YuThree"]
+    })
+    gitalk.render('comment-container')
 </script>
 
     </div>
@@ -914,7 +915,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 ybc&nbsp;
+                &copy; 2019 YuThree&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
                 <br>
