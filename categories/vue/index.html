@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>分类: img - YuThree</title>
+<title>分类: vue - YuThree</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -10,7 +10,7 @@
     <meta name="keywords" content="blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="YuThree">
-<meta property="og:url" content="https://yuthree.github.io/categories/img/index.html">
+<meta property="og:url" content="https://yuthree.github.io/categories/vue/index.html">
 <meta property="og:site_name" content="YuThree">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
@@ -134,7 +134,7 @@
         <ul>
             <li><a href="/categories">分类</a></li>
             
-            <li class="is-active"><a href="#" aria-current="page">img</a></li>
+            <li class="is-active"><a href="#" aria-current="page">vue</a></li>
         </ul>
         </nav>
     </div>
@@ -143,8 +143,8 @@
     <div class="card">
     
     <div class="card-image">
-        <a href="/2018/04/04/img-show/" class="image is-7by1">
-            <img class="thumbnail" src="/images/titlebg_4.jpg" alt="img-show">
+        <a href="/2019/06/15/vue-note-about-computed/" class="image is-7by1">
+            <img class="thumbnail" src="/images/titlebg_17.jpg" alt="vue note about watch">
         </a>
     </div>
     
@@ -152,17 +152,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-04-04T10:04:22.000Z">2018-04-04</time>
+                <time class="level-item has-text-grey" datetime="2019-06-15T08:51:34.000Z">2019-06-15</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/img/">img</a>
+                <a class="has-link-grey -link" href="/categories/vue/">vue</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 35 个字)
+                    4 分钟 读完 (大约 556 个字)
                 </span>
                 
                 
@@ -171,21 +171,107 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/04/04/img-show/">img-show</a>
+                <a class="has-link-black-ter" href="/2019/06/15/vue-note-about-computed/">vue note about watch</a>
             
         </h1>
         <div class="content">
-            <div class="justified-gallery"><br><img src="/images/titlebg_4.jpg" alt="titlebg_4"><br><img src="/images/titlebg_5.jpg" alt="titlebg_5"><br><img src="/images/titlebg_6.jpg" alt="titlebg_6"><br><img src="/images/titlebg_7.jpg" alt="titlebg_7"><br></div>
+            <p>vue note 续篇 <strong>watch</strong></p>
+<h2 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h2><p><code>Vue 通过 watch 选项提供了一个更通用的方法，来响应数据的变化。当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的</code> </p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">   <span class="hljs-comment">// 如果 data的`question` 发生改变，这个函数就会运行</span></span><br><span class="line">   question: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">newQuestion, oldQuestion</span>) </span>&#123;</span><br><span class="line">     <span class="hljs-keyword">this</span>.answer = <span class="hljs-string">'Waiting for you to stop typing...'</span></span><br><span class="line">     <span class="hljs-keyword">this</span>.dosomthing()</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h2><figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vm.$watch( expOrFn, callback, [options] )</span><br><span class="line">参数：</span><br><span class="line"></span><br><span class="line">&#123;<span class="hljs-built_in">String</span> | <span class="hljs-built_in">Function</span>&#125; expOrFn</span><br><span class="line">&#123;<span class="hljs-built_in">Function</span> | <span class="hljs-built_in">Object</span>&#125; callback</span><br><span class="line">&#123;<span class="hljs-built_in">Object</span>&#125; [options]</span><br><span class="line">	&#123;<span class="hljs-built_in">Boolean</span>&#125; deep</span><br><span class="line">	&#123;<span class="hljs-built_in">Boolean</span>&#125; immediate</span><br><span class="line">返回值：&#123;<span class="hljs-built_in">Function</span>&#125; unwatch</span><br></pre></td></tr></table></figure>
+<p><strong><em>注意：在变异 (不是替换) 对象或数组时，旧值将与新值相同，因为它们的引用指向同一个对象/数组。Vue 不会保留变异之前值的副本。</em></strong></p>
+<ol>
+<li><p>实例</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 键路径</span></span><br><span class="line">vm.$watch(<span class="hljs-string">'a.b.c'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">newVal, oldVal</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-comment">// 做点什么</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 函数</span></span><br><span class="line">vm.$watch(</span><br><span class="line">  <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 表达式 `this.a + this.b` 每次得出一个不同的结果时</span></span><br><span class="line">    <span class="hljs-comment">// 处理函数都会被调用。</span></span><br><span class="line">    <span class="hljs-comment">// 这就像监听一个未被定义的计算属性</span></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.a + <span class="hljs-keyword">this</span>.b</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">newVal, oldVal</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 做点什么</span></span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line"><span class="hljs-comment">//vm.$watch 返回一个取消观察函数，用来停止触发回调：</span></span><br><span class="line"><span class="hljs-keyword">var</span> unwatch = vm.$watch(<span class="hljs-string">'a'</span>, cb)</span><br><span class="line"><span class="hljs-comment">// 之后取消观察</span></span><br><span class="line">unwatch()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>选项：deep<br><strong><em>为了发现对象内部值的变化，可以在选项参数中指定 deep: true 。注意监听数组的变动不需要这么做。</em></strong></p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vm.$watch(<span class="hljs-string">'someObject'</span>, callback, &#123;</span><br><span class="line">  deep: <span class="hljs-literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line">vm.someObject.nestedValue = <span class="hljs-number">123</span></span><br><span class="line"><span class="hljs-comment">// callback is fired</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>选项：immediate<br><strong><em>在选项参数中指定 immediate: true 将立即以表达式的当前值触发回调：</em></strong></p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vm.$watch(<span class="hljs-string">'a'</span>, callback, &#123;</span><br><span class="line">  immediate: <span class="hljs-literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="hljs-comment">// 立即以 `a` 的当前值触发回调</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h2><p><code>对于任何复杂逻辑，你都应当使用计算属性。</code> </p>
+<p>computed和方法差不多调用也只有一个括号差别，但是<code>计算属性是基于它们的响应式依赖进行缓存的</code> 只在相关响应式依赖发生改变时它们才会重新求值，相比之下，每当触发重新渲染时，调用方法将总会再次执行函数,如果你有一个for循环计算，调用次数较多就可以考虑用计算属性</p>
+<h2 id="封面"><a href="#封面" class="headerlink" title="封面"></a>封面</h2><p><a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/photos/j1F-WyKgr28" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Matt Hardy"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewbox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"/></svg></span><span style="display:inline-block;padding:2px 3px">Matt Hardy</span></a></p>
+
         </div>
         
         
-        <div class="level is-mobile">
-            <div class="level-start">
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/06/13/VUE-note/" class="image is-7by1">
+            <img class="thumbnail" src="/images/titlebg_21.jpg" alt="VUE note about responsive">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-13T05:16:25.000Z">2019-06-13</time>
+                
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/04/04/img-show/#more">阅读更多</a>
+                <a class="has-link-grey -link" href="/categories/vue/">vue</a>
                 </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 931 个字)
+                </span>
+                
+                
             </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/13/VUE-note/">VUE note about responsive</a>
+            
+        </h1>
+        <div class="content">
+            <p>从2019年2月开始进入vue开发，几个月下来踩了不少坑 这里记录一下需要注意的点，首先是vue的数据响应式 </p>
+<h2 id="响应式"><a href="#响应式" class="headerlink" title="响应式"></a>响应式</h2><p><code>Vue 最独特的特性之一，是其非侵入性的响应式系统</code> </p>
+<blockquote>
+<p>使用vue最方便的地方在于不关心数据展示只关注数据本身，而实现响应式的更本是ES5中的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="noopener">Object.defineProperty</a>  转换所有属性为 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#%E5%AE%9A%E4%B9%89_getters_%E4%B8%8E_setters" target="_blank" rel="noopener">getter/setter</a> 这也是vue 不支持IE8 及以下浏览器的原因</p>
+</blockquote>
+<ol>
+<li><p>Vue 无法检测到对象属性的添加或删除。由于 Vue 会在初始化实例时对属性执行 getter/setter 转化，所以属性必须在 data 对象上存在才能让 Vue 将它转换为响应式的，对于已经创建的实例，Vue 不允许动态添加根级别的响应式属性。但是，可以使用 <code>Vue.set(object, propertyName, value)</code> 方法向嵌套对象添加响应式属性 比如</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vue.set(vm.someObject, <span class="hljs-string">'b'</span>, <span class="hljs-number">2</span>)</span><br><span class="line"><span class="hljs-comment">//or</span></span><br><span class="line"><span class="hljs-keyword">this</span>.$<span class="hljs-keyword">set</span>(this.someObject,'b',2)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有时你可能需要为已有对象赋值多个新属性，比如使用 <code>Object.assign()</code> 或 <code>_.extend()</code>。但是，这样添加到对象上的新属性不会触发更新。在这种情况下，你应该用原对象与要混合进去的对象的属性一起创建一个新的对象。</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 代替 `Object.assign(this.someObject, &#123; a: 1, b: 2 &#125;)`</span></span><br><span class="line"><span class="hljs-keyword">this</span>.someObject = <span class="hljs-built_in">Object</span>.assign(&#123;&#125;, <span class="hljs-keyword">this</span>.someObject, &#123; <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> &#125;)</span><br><span class="line"><span class="hljs-comment">// 还可以用解构</span></span><br><span class="line"><span class="hljs-keyword">this</span>.someObject = &#123; ...&#123; <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> &#125;), ...this.someObject &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组触发更新检测也差不多</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">this</span>.someArry[<span class="hljs-number">1</span>] = <span class="hljs-string">'x'</span> <span class="hljs-comment">// 不是响应性的</span></span><br><span class="line"><span class="hljs-keyword">this</span>.someArry.length = <span class="hljs-number">2</span> <span class="hljs-comment">// 不是响应性的</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//解决方法</span></span><br><span class="line"><span class="hljs-keyword">this</span>.$<span class="hljs-keyword">set</span>(vm.items, indexOfItem, newValue)</span><br><span class="line">this.someArry.splice(newLength)</span><br><span class="line">this.someArry=[...newArry]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>异步更新队列 </p>
+<blockquote>
+<p>Vue 在更新 DOM 时是异步执行的。只要侦听到数据变化，Vue 将开启一个队列，并缓冲在同一事件循环中发生的所有数据变更。如果同一个 watcher 被多次触发，只会被推入到队列中一次。然后，在下一个的事件循环“tick”中，Vue 刷新队列并执行实际 (已去重的) 工作。Vue 在内部对异步队列尝试使用原生的 <code>Promise.then</code>、<code>MutationObserver</code> 和 <code>setImmediate</code>，如果执行环境不支持，则会采用 <code>setTimeout(fn, 0)</code> 代替。当你设置 vm.someData = ‘new value’，该组件不会立即重新渲染。<br>当刷新队列时，组件会在下一个事件循环“tick”中更新。多数情况我们不需要关心这个过程，但是如果你想基于更新后的 DOM 状态来做点什么，这就可能会有些棘手。虽然 Vue.js 通常鼓励开发人员使用“数据驱动”的方式思考，避免直接接触 DOM，但是有时我们必须要这么做。为了在数据变化之后等待 Vue 完成更新 DOM，可以在数据变化之后立即使用 <code>Vue.nextTick(callback)</code>。这样回调函数将在 DOM 更新完成后被调用 </p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"example"</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue(&#123; </span><br><span class="line"> el: <span class="hljs-string">'#example'</span>, </span><br><span class="line"> data: &#123; <span class="hljs-attr">message</span>: <span class="hljs-string">'123'</span> &#125; </span><br><span class="line">&#125;)</span><br><span class="line">vm.message = <span class="hljs-string">'new message'</span> <span class="hljs-comment">// 更改数据 </span></span><br><span class="line">vm.$el.textContent === <span class="hljs-string">'new message'</span> <span class="hljs-comment">// false</span></span><br><span class="line">Vue.nextTick(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123; </span><br><span class="line">  vm.$el.textContent === <span class="hljs-string">'new message'</span> <span class="hljs-comment">// true </span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>因为 $nextTick() 返回一个 <code>Promise</code> 对象，所以你可以使用新的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank" rel="noopener">ES2016 async/await</a> 语法完成相同的事情：</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">  updateMessage: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">this</span>.message = <span class="hljs-string">'已更新'</span></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.$el.textContent) <span class="hljs-comment">// =&gt; '未更新'</span></span><br><span class="line">    <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.$nextTick()</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.$el.textContent) <span class="hljs-comment">// =&gt; '已更新'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
         
         
     </div>

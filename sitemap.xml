@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yuthree.github.io/2019/06/15/vue-note-about-computed/</loc>
+    
+    <lastmod>2019-08-25T06:54:51.115Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuthree.github.io/2019/06/13/VUE-note/</loc>
+    
+    <lastmod>2019-08-21T08:45:52.861Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yuthree.github.io/2019/08/06/gitalk-set/</loc>
     
     <lastmod>2019-08-12T08:58:07.024Z</lastmod>
