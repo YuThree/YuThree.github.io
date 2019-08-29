@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yuthree.github.io/2019/06/13/VUE-note/</loc>
+    <loc>https://yuthree.github.io/2019/06/30/pub-function/</loc>
     
-    <lastmod>2019-08-26T03:03:34.979Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuthree.github.io/2019/06/15/vue-note-about-computed/</loc>
-    
-    <lastmod>2019-08-26T03:03:21.598Z</lastmod>
+    <lastmod>2019-08-28T09:34:28.896Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://yuthree.github.io/2019/08/06/gitalk-set/</loc>
     
-    <lastmod>2019-08-12T08:58:07.024Z</lastmod>
+    <lastmod>2019-08-27T07:22:40.098Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuthree.github.io/2019/06/15/vue-note-about-watch/</loc>
+    
+    <lastmod>2019-08-27T07:20:37.115Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuthree.github.io/2019/06/13/VUE-note/</loc>
+    
+    <lastmod>2019-08-27T07:19:56.973Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuthree.github.io/2018/03/03/good-for-work/</loc>
+    
+    <lastmod>2019-08-27T07:19:31.374Z</lastmod>
     
   </url>
   
@@ -26,13 +40,6 @@
     <loc>https://yuthree.github.io/2018/04/04/img-show/</loc>
     
     <lastmod>2019-08-12T08:55:09.220Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuthree.github.io/2018/03/03/good-for-work/</loc>
-    
-    <lastmod>2019-08-12T08:54:39.746Z</lastmod>
     
   </url>
   
