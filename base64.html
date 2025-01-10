@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>base64</title>
+</head>
+<body>
+    <input type="file" id="fileInput">
+    <textarea id="textarea" style="height:200px;width:100%"></textarea>
+    
+    <script>
+        const reader =new FileReader()
+        reader.onload=function(e){  document.getElementById('textarea').value=e.target.result}
+
+        let file = document.getElementById("fileInput")
+        file.addEventListener('change',function(){
+            reader.readAsDataURL(document.getElementById("fileInput").files[0])
+        })
+    </script>
+</body>
+</html>
+
